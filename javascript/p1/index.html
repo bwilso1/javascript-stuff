@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/touch-icon-iphone4.png" />
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" /> 
+
+  </head>
+  <body>
+    
+    <div class="board">
+      
+      <h1>Whack-a-Mole</h1>
+      
+      <div class="row-fluid">
+	<div class="span4">
+	  Time Remaining:
+	  <!-- container for the time remaining - you may want to id -->
+	  <div id="time" class="well">
+	    0
+	  </div>
+	</div>
+	<div class="span4">
+	  Score:
+	  <!-- container for the score - you may want to id -->
+	  <div id="score" class="well">
+	    0
+	  </div>
+	</div>
+	<div class="span4">
+          High Score:
+          <!-- container for the high score - you may want to id -->
+          <div id="maxScore" class="well">
+            0
+          </div>
+        </div>
+
+      </div>
+      
+      
+      <div class="row-fluid board-row">
+        <!-- first row of images, you will need to add event handlers, id, etc... -->
+	<div class="span4">
+		<!-- img/down means file is located in the img folder in the current folder -->
+          <img id=1 class="mole" src="img/down.png" /> 
+	</div>
+	<div class="span4" >
+          <img id=2 class="mole" src="img/down.png" />
+	</div>
+	<div class="span4">
+          <img id=3 class="mole" src="img/down.png" />
+	</div>
+      </div>
+      
+      <div class="row-fluid board-row">
+        <!-- second row, middle image shows how (during game play) 
+             a mole can be shown by swapping down.png with up.png -->
+	<div class="span4" >
+          <img id=4 class="mole" src="img/down.png" />
+	</div>
+	<div class="span4" >
+          <img id=5 class="mole" src="img/down.png" />
+	</div>
+	<div class="span4">
+          <img id=6 class="mole" src="img/down.png" />
+	</div>
+      </div>
+      
+      <div class="row-fluid board-row">
+	<div class="span4">
+          <img id=7 class="mole" src="img/down.png" />
+	</div>
+	<div class="span4">
+          <img id=8 class="mole" src="img/down.png" id="8" />
+	</div>
+	<div class="span4">
+          <img id=9 class="mole" src="img/down.png" />
+	</div>
+      </div>
+      
+      <div class="board-row">
+	<!-- need to bind event handler to restart the game -->
+	<input type="button" id="reset" value="reset high score" class="btn btn-large"/>
+	<input type="button" id="start" value="Start Game" class="btn btn-primary btn-large"/>
+	
+      </div>
+      
+    </div> <!-- end div.board -->
+
+  </body>
+  	 <script type="text/javascript" src="js/wack_mole.js"></script>
+ 
+</html>
